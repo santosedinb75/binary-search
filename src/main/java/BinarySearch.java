@@ -44,7 +44,6 @@ class BinarySearch {
 //        } else {
 //            throw new ValueNotFoundException( "\"Value not in array" );
 //        }
-//
 //        return valueFoundAtIndex;
 //    }
 //}
