@@ -24,7 +24,7 @@ public class BinarySearchTest {
         assertEquals(0, search.indexOf(6));
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void findsAValueInTheMiddleOfAnArray() throws ValueNotFoundException {
         List<Integer> sortedList = Collections.unmodifiableList(
