@@ -1,5 +1,3 @@
-
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -36,7 +34,7 @@ public class BinarySearchTest {
         assertEquals(3, search.indexOf(6));
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void findsAValueAtTheBeginningOfAnArray() throws ValueNotFoundException {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -48,7 +46,7 @@ public class BinarySearchTest {
         assertEquals(0, search.indexOf(1));
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void findsAValueAtTheEndOfAnArray() throws ValueNotFoundException {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -60,7 +58,7 @@ public class BinarySearchTest {
         assertEquals(6, search.indexOf(11));
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void findsAValueInAnArrayOfOddLength() throws ValueNotFoundException {
         List<Integer> sortedListOfOddLength = Collections.unmodifiableList(
@@ -72,7 +70,7 @@ public class BinarySearchTest {
         assertEquals(9, search.indexOf(144));
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void findsAValueInAnArrayOfEvenLength() throws ValueNotFoundException {
         List<Integer> sortedListOfEvenLength = Collections.unmodifiableList(
@@ -84,7 +82,7 @@ public class BinarySearchTest {
         assertEquals(5, search.indexOf(21));
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void identifiesThatAValueIsNotFoundInTheArray() throws ValueNotFoundException {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -99,7 +97,7 @@ public class BinarySearchTest {
         search.indexOf(7);
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void aValueSmallerThanTheArraysSmallestValueIsNotFound() throws ValueNotFoundException {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -114,7 +112,7 @@ public class BinarySearchTest {
         search.indexOf(0);
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void aValueLargerThanTheArraysSmallestValueIsNotFound() throws ValueNotFoundException {
         List<Integer> sortedList = Collections.unmodifiableList(
@@ -129,7 +127,7 @@ public class BinarySearchTest {
         search.indexOf(13);
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void nothingIsFoundInAnEmptyArray() throws ValueNotFoundException {
         List<Integer> emptyList = Collections.emptyList();
@@ -142,7 +140,7 @@ public class BinarySearchTest {
         search.indexOf(1);
     }
 
-    @Ignore("Remove to run test")
+//    @Ignore("Remove to run test")
     @Test
     public void nothingIsFoundWhenTheLeftAndRightBoundCross() throws ValueNotFoundException {
         List<Integer> sortedList = Collections.unmodifiableList(

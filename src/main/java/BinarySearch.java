@@ -1,20 +1,31 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class BinarySearch {
-    List<Integer> list;
-    BinarySearch( List<Integer> listOfUnitLength ) {
-        this.list = listOfUnitLength;
+class BinarySearch<T extends Comparable<? super T>> {
+
+    private final List<T> sortedList;
+
+    BinarySearch( final List<T> sortedList ) {
+        this.sortedList = Collections.unmodifiableList( new ArrayList<T>( sortedList ) );
     }
 
-    int indexOf( int value ) throws ValueNotFoundException {
-        int result = 0;
+    int indexOf( T target ) throws ValueNotFoundException {
+        return indexOf( target, 0, sortedList.size() - 1 );
+    }
 
-        for( int x : list ) {
-            if( x == 3 ) {
-                result = 3;
-            }
+    private int indexOf( T target, int low, int high ) throws ValueNotFoundException {
+        if ( low > high ) {
+            throw new ValueNotFoundException( "Value not in array" );
         }
+        int mid = ( low + high ) / 2;
 
-        return result;
+        if ( target.compareTo( sortedList.get( mid ) ) == 0 ) {
+            return mid;
+        } else if ( target.compareTo( sortedList.get( mid ) ) < 0 ) {
+            return indexOf( target, low, mid - 1 );
+        } else {
+            return indexOf( target, mid + 1, high );
+        }
     }
 }
